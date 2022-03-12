@@ -23,10 +23,10 @@ The following **bonus** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-User Story 1,2 & 5: 
+User Story 1,2 & 5: <br>
 <img src= "http://g.recordit.co/6je8R7SyiG.gif" width = 250><br>
-User Story 4:
+User Story 4: <br>
 <img src = "http://g.recordit.co/dvGtH7wLnx.gif" width = 250><br>
-User Story 3:
+User Story 3: <br>
 <img src = "http://g.recordit.co/4cwhSSrTcJ.gif" width = 250><br>
 
