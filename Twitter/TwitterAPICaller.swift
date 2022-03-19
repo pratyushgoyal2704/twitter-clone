@@ -8,6 +8,7 @@
 
 import UIKit
 import BDBOAuth1Manager
+import Alamofire
 
 class TwitterAPICaller: BDBOAuth1SessionManager {
     static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "RHovtyGoiDtVxSwZaG4QCImWp", consumerSecret: "kgFgohvhBG8f5AYIi9hTtw70wM7Oxz7l0AevJmdDvuDd5BrY7r")
@@ -58,6 +59,16 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
 
     func postRequest(url: String, parameters: [Any], success: @escaping () -> (), failure: @escaping (Error) -> ()){
         TwitterAPICaller.client?.post(url, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success()
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    }
+    
+    func postTweet(tweetString: String, success: @escaping () -> (), failure: @escaping (Error) -> ()) {
+        let url = "https://api.twitter.com/1.1/statuses/update.json"
+        
+        TwitterAPICaller.client?.post(url, parameters: ["status": tweetString], progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
             success()
         }, failure: { (task: URLSessionDataTask?, error: Error) in
             failure(error)
