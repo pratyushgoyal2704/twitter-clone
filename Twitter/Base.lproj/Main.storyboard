@@ -114,6 +114,7 @@
                                 <action selector="onLogout:" destination="dJS-dq-kln" id="ts9-LW-2vf"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Tweet" id="30J-Ng-BX7"/>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4q3-bO-cqV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
